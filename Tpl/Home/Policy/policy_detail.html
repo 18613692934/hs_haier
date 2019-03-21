@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>政策服务详情</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="renderer" content="webkit" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<!--<link  href="__HOME_CSS__/font-awesome.min.css" type="text/css" rel="stylesheet" />-->
+	<link  href="__HOME_CSS__/monui.css" type="text/css" rel="stylesheet" />
+	<!--<link  href="__HOME_CSS__/common.css" type="text/css" rel="stylesheet" />-->
+	<!--<link  href="__HOME_CSS__/jquery.datatables.min.css" type="text/css" rel="stylesheet" />-->
+	<link  href="__HOME_CSS__/common_1.css" type="text/css" rel="stylesheet" />
+	<link  href="__HOME_CSS__/header.css" type="text/css" rel="stylesheet" />
+	<link  href="__HOME_CSS__/commondetail.css" type="text/css" rel="stylesheet" />
+	<!--<link  href="__HOME_CSS__/apidetail.css" type="text/css" rel="stylesheet" />-->
+	<!--<link  href="__HOME_CSS__/iconfont_4.css" type="text/css" rel="stylesheet" />-->
+     <script type="text/javascript" src="__HOME_JS__/fontSize.js"></script> 
+     
+        <!-- Basic styles -->
+<link href="http://yladc.com/static/css/bootstrap.css" rel="stylesheet">
+<link  href="http://yladc.com/static/css/font-awesome.min.css" rel="stylesheet">
+<!-- Expand styles -->
+<link href="http://yladc.com/static/css/bootstrap_ext.css" rel="stylesheet">
+<link href="http://yladc.com/static/css/ecsp_size.css" rel="stylesheet">
+<link href="http://yladc.com/static/css/bs_plugins.css" rel="stylesheet">
+<link href="http://yladc.com/static/theme/css/default_theme.css" rel="stylesheet">
+<link href="http://yladc.com/static/css/control-library.css" rel="stylesheet">
+<!-- Message styles  * Add liyingkang * -->
+<link href="http://yladc.com/static/components/css/components.css" rel="stylesheet">
+<link href="http://yladc.com/static/css/animate.min.css" rel="stylesheet">
+
+
+
+    
+    <!-- Custom styles for this template -->
+    <link href="http://yladc.com/static/data-service/css/data-service.css" rel="stylesheet">
+</head>
+
+<body>
+        <script src="http://yladc.com/static/js/html5shiv.js"></script>
+<script src="http://yladc.com/static/js/excanvas.js"></script>
+<script src="http://yladc.com/static/js/jquery.min.js"></script>
+<script src="http://yladc.com/static/js/jquery.formatDate.js"></script>
+<script src="http://yladc.com/static/lib/vue/vue.min.js"></script>
+<script src="http://yladc.com/static/lib/vue/vue.filter.js"></script>
+<script src="http://yladc.com/static/lib/vue/vue-i18n-plugin.js"></script>
+<script src="http://yladc.com/static/js/playx.js"></script>
+<script src="http://yladc.com/static/js/sha1.js"></script>
+<script src="http://yladc.com/static/lib/layer/layer.js"></script>
+<script src="http://yladc.com/static/js/bootstrap.min.js"></script>
+<!--[if lt IE 9]>
+<script src="http://yladc.com/static/js/respond.min.js"></script>
+<![endif]-->
+<!--<script src="http://yladc.com/static/js/ecsp_skin.js"></script>-->
+<script src="http://yladc.com/static/js/placeholder.js"></script>
+<script src="http://yladc.com/static/lib/handlebars/handlebars.js"></script>
+<script src="http://yladc.com/static/lib/handlebars/handlebars.registerHelper.js"></script>
+    
+    
+		<script src="__HOME_JS__/dialog.js"></script>
+<style>
+.modal {
+ z-index: 10001;
+}
+</style>
+
+<script>
+    var ctx = 'http://yladc.com/static';
+    var ctx_w = 'http://yladc.com';
+    var rest_url = 'http://10.176.4.154:9001';
+    var upload_url = 'http://yladc.com';
+    var userimg = '';
+    var loginName = '';
+    var userId = '';
+        {var rongKey = '25wehl3u2juww';}
+                var userkey = '';
+        var userType = '';
+    var appId = 'app001';
+        
+
+    $(document).ready(function () {
+//        $("#keywords").bind('keyup', function (event) {
+//            event = document.all ? window.event : event;
+//            if ((event.keyCode || event.which) == 13) {
+//                slor();
+//            }
+//        });
+
+        $(window).returntop({
+            showHeight: 50, //设置滚动多少高度时显示
+            speed: 300  //返回顶部的速度以毫秒为单位
+        });
+        $('input, textarea').not(':password').placeholder();
+        $("[limit]").limit();
+        jQuery.fn.isChildAndSelfOf = function (b) {
+            return (this.closest(b).length > 0);
+        };
+        $(document).click(function (event) {
+            if (!$(event.target).isChildAndSelfOf(".text-dropdown")) {
+                $(".dropdown-area").hide();
+            }
+        });
+//        if ($(window).scrollTop() > 50) {
+//            $('#yq-header').children('.navbar').addClass("navbar");
+//        }
+//        $(window).scroll(function () {
+//            if ($(window).scrollTop() > 50) {
+//                $('#yq-header').children('.navbar').addClass("navbar-white");
+//            } else if ($(window).scrollTop() < 50) {
+//                $('#yq-header').children('.navbar').removeClass("navbar-white");
+//            }
+//        });
+        /* drop menu */
+//        $(".search-round .dropdown-menu li a").click(function () {
+//            var a = $(this).text();
+//            $(this).parents('.dropdown').find('.droptype').text(a);
+//        });
+
+        //如果当前加载页面存在两个或两个以上的关键字搜素区域，则删除第一个关键字搜素区域（删除头部搜索区域），仅保留一个
+        //获取自定义搜索样式  add by zhangwei
+        var customSearch = $(".customSearch-class");
+        if (customSearch != undefined && customSearch.length >= 2) {
+            customSearch.eq(0).remove();
+        }
+
+        //尾部高度
+        var footerHeight = 0,
+                footerTop = 0,
+                $footer = $("#yly-footer");
+        positionFooter();
+        //定义positionFooter function
+        function positionFooter() {
+            //取到div#footer高度
+            footerHeight = $footer.height();
+            //div#footer离屏幕顶部的距离
+            footerTop = ($(window).scrollTop() + $(window).height() - footerHeight) + "px";
+            //alert(footerTop);
+
+            //如果页面内容高度小于屏幕高度，div#footer将绝对定位到屏幕底部，否则div#footer保留它的正常静态定位
+            if (($(document.body).height() + footerHeight) < $(window).height()) {
+                $footer.css({
+                    width: '100%',
+                    bottom: 0,
+                    position: "absolute"
+                });
+            } else {
+                $footer.css({
+                    position: "static"
+                });
+            }
+        }
+
+        $(window).scroll(positionFooter).resize(positionFooter);
+    });
+
+//    function slor() {
+//        $("#headerForm").submit();
+//    }
+</script>
+
+
+
+
+
+
+
+<script src="http://yladc.com/static/lib/validation/jquery.validate.js"></script>
+<script src="http://yladc.com/static/lib/validation/localization/messages_zh.js"></script>
+<script src="http://yladc.com/static/lib/validation/additional-methods.js"></script>
+<script src="http://yladc.com/static/lib/validation/ecsp.validate.js"></script>
+<div class="sy_line"></div>
+ {include file="Header/header"/} 
+<div class="banner" style="height: 140px;background: url('__HOME_IMG__/policy_banner.jpg') center"></div>
+ <div id="bd-content" class="bd-content" style="margin-top:40px;">
+    <div class="container">
+        
+
+        <div class="row">
+            <div class="col-md-24">
+            
+    
+<ul class="nav nav-tabs">
+    <li class="active"  >
+        <a href="{:U('Policy/policy')}">政策服务</a>
+    </li>
+
+</ul>
+
+
+            
+
+
+
+
+
+
+<!-- bd-content -->
+
+
+<div class="diseased-wrap">
+    
+    <div class="row">
+        <div class="col-md-18" id="contentDiv">
+            <div class="container">
+            <div class="detail-right">
+                <div class="right-title">
+                    <div class="detail-header">
+                        <span class="detail-title">全力推进 “510”企业培育工程</span>
+                        
+                    </div>
+                    <div class="detail-simple-info">
+                        <div>作者：李常</div>
+                        <div>发布时间：<?php echo date('Y-m-d H:i',time())?></div>
+                     
+                      
+                    </div>
+                </div>
+                <div class="m-tab">
+                    <div class="right-nav tab-header">
+                        <ul>
+                            <li class="data-download"></i>文章详情</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="detail-info-list tab-body">
+                        <ul>
+                            <li>
+                                <div class="detail-api">
+                                    <ul class="api-list">
+                                        <li>
+                                            <div class="api-body">
+                                                <div class="api-body-left">
+                                                    <div class="api-part">
+                                                        <div class="api-detail">东方圣城网9月7日讯（记者孙逊）今天下午，全市“510”工程调度会议召开，调度各县市区落实全市“510”企业培育工程动员会议精神工作情况，掌握工业高成长性专班企业近期发展情况，安排部署下步重点工作。副市长张胜明出席会议并讲话。
+                                                        张胜明要求，各级各有关部门要进一步提高对“510”企业培育工程的认识，与当前开展“服务企业百日行动”紧密结合，围绕企业优服务、帮助企业解难题，在全市形成关心支持企业发展的浓厚氛围和良好环境。要强化属地责任，对企业反映问题的解决时限、方法措施、责任主体一一明确，全力抓好问题解决，集中力量培育企业发展。要尽快完善“510”工程办公室各项工作机制，确保高效运转。要加大督导考核力度，以严格督导考核促进相关工作任务落实落地。会上，各县市区汇报了工作情况；工业高成长性专班企业作了发言；通报了督导情况。
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                           
+                     
+                       
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </div>
+</div>
+
+
+            </div>
+        </div>
+    </div>
+</div> 
+ 
+
+
+ {include file="Header/footer"/} 
+</body>
+</html>

@@ -1,0 +1,34 @@
+ <div class="m-hd"> 
+   <div class="g-main"> 
+    <div class="m-hd-top"> 
+     <div class="u-logo"> 
+         海尔COSMOPlat种植管理人工智能平台
+     </div> 
+     <div class="m-login"> 
+      <input type="hidden" id="login_salt" value="" /> 
+      <!----> 
+      
+       <?php if($head_user){ ?>
+        <a id="bounceRe" class="m-btn" style="width:auto" href="{:U('User/Index/index')}">您好，{$head_user['uname']}</a> 
+      <?php }else{ ?>
+         <a id="bounceRe" class="m-btn" href="{:U('Login/login')}">登录</a> 
+      <?php } ?>
+      <!----> 
+     </div> 
+    </div> 
+    <div class="m-nav-list"> 
+     <ul> 
+      <li id="pIndex"   class="<?php if($Think.CONTROLLER_NAME == 'Index'){ ?>active <?php } ?>"><a href="/"><i class="nav-icon icon-index"></i>首页</a></li> 
+      <li id="pCatalog" class="<?php if($Think.CONTROLLER_NAME == 'Environment'){ ?>active <?php } ?>"><a href="{:U('Environment/environment')}"><i class="nav-icon icon-catalog"></i>环境数据</a></li> 
+      <li id="pCatalog" class="<?php if($Think.CONTROLLER_NAME == 'Produce'){ ?>active <?php } ?>"><a href="{:U('produce/produce')}"><i class="nav-icon icon-api"></i>生产管理</a></li> 
+      <li id="pApp" class="<?php if($Think.CONTROLLER_NAME == 'Sales'){ ?>active <?php } ?>"><a href="{:U('sales/sales')}"><i class="nav-icon icon-app"></i>销售记录</a></li> 
+      <!--<li id="pMap" class="<?php if($Think.CONTROLLER_NAME == 'Purchase'){ ?>active <?php } ?>"><a href="{:U('purchase/purchase')}"><i class="nav-icon icon-map"></i>对外采购</a></li>--> 
+      <li id="pDynamic" class="<?php if($Think.CONTROLLER_NAME == 'Charts'){ ?>active <?php } ?>"><a href="{:U('charts/charts')}"><i class="nav-icon icon-dynamic"></i>年度台帐</a></li> 
+      <li id="pInteract"  class="<?php if($Think.CONTROLLER_NAME == 'Expert'){ ?>active <?php } ?>"><a href="{:U('expert/expert')}"><i class="nav-icon icon-interact"></i>专家建议</a></li> 
+      <li id="pInteract"  class="<?php if($Think.CONTROLLER_NAME == 'Policy'){ ?>active <?php } ?>"><a href="{:U('policy/policy')}"><i class="nav-icon icon-developer"></i>政策服务</a></li> 
+      <li id="pMap" class="<?php if($Think.CONTROLLER_NAME == 'Pick'){ ?>active <?php } ?>"><a href="{:U('pick/pick')}"><i class="nav-icon icon-developer"></i>采摘导购</a></li> 
+     </ul> 
+    </div> 
+    <div id="refushhtml" style=""></div> 
+   </div> 
+  </div>

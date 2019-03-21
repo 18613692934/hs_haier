@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            #myPlayer{
+                width:1000px;
+                height:500px;
+            }
+            
+        </style>
+    </head>
+    <body>
+        <div>TODO write content</div>
+        <script src="__PUBLIC_STATIC__/EZUIKit-1.4/ezuikit.js"></script>
+        
+            
+
+        <video id="myPlayer" poster="[这里可以填入封面图片URL]" controls playsInline webkit-playsinline autoplay>
+            <source src="rtmp://rtmp.open.ys7.com/openlive/e10e69f6ddbb4c809381d71a0448bffe.hd" type="" />
+        </video>
+
+        <script>
+            var player = new EZUIPlayer('myPlayer');
+        </script>
+    </body>
+</html>

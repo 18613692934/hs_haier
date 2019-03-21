@@ -1,0 +1,73 @@
+﻿/*Copyright 2015 Qianshun Inc. All Rights Reserved.
+ *=======================================================================
+ *@Explain:	后台登录样式表
+ *@date:	2015-03-19
+ *=======================================================================
+ */ 
+
+/*初使全局部分*/
+html{min-width:1260px; width:100%;overflow:hidden;/*不显示滚动条*/-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;}
+body{background:#e7e8eb;}
+body,
+input,
+textarea,
+label,
+pre{font: 14px/1.6 "Microsoft YaHei", "微软雅黑", Helvetica, "黑体", Arial, Tahoma;color:#404040;}
+body,div,a,p,h1,h2,h3,form,label,input,select,textarea,img,span,table,tbody,td,dl,dt,dd,ul,li,pre{margin:0px;padding:0px;outline:none;}
+table{border-collapse:collapse;border-spacing:0;}
+ul,li{list-style:none;}
+a{color:#222;text-decoration:none;}
+a:hover{color:#458aee;text-decoration:none;}
+/*解决chorme记住密码黄色背景*/
+input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill{box-shadow:inset 0 0 0 1000px #fff; -moz-box-shadow:inset 0 0 0 1000px #fff; -webkit-box-shadow:inset 0 0 0 1000px #fff}
+/*自定义全局使用*/
+.hidden{display:none !important;}
+.cf{*zoom: 1;}
+.cf:before,
+.cf:after{display: table;content: "";}
+.cf:after,
+.nav:after{clear: both;}
+.clear{clear:both;height:0px;}
+/*页头*/
+.header{background-color:#fff;border-top:4px solid #008fff;border-bottom:1px solid #008fff;}
+.header_box{height:60px;width:1100px;margin:0 auto;position:relative;}
+.header .logo{float:left;display:inline-block;}
+.header .logo a{display:block;background:url(../images/logo.png) no-repeat;background-size:100% 100%;width:307px;height:46px;overflow:hidden;text-indent:-9999px;margin-top:12px;}
+/*主体*/
+.body{padding:0 0 88px;}
+.body .login_box{background-color:#FFF;border-bottom:1px solid #CCC;}
+.body .login_panel{position:relative;top:0.7rem;height:1000px;overflow:hidden;width:1100px;position:relative;margin:0 auto;background-image:url(../images/bg_login.jpg);background-repeat:no-repeat;background-color:#FFF; background-position:left 20px;}
+.login_frame{width:316px;min-height:200px;background:#FFF;padding:25px 35px 30px;position:absolute;top:45px;right:10px;border:#CCC 1px solid;border-radius:2px;-moz-border-radius:2px;-webkit-border-radius:2px;box-shadow:3px 3px 5px rgba(0, 0, 0, 0.5);-moz-box-shadow:3px 3px 5px rgba(0, 0, 0, 0.5);-webkit-box-shadow:3px 3px 5px rgba(0, 0, 0, 0.5);}
+.login_frame h2{font-size:20px;font-weight:400;font-style:normal;}
+.login_frame .login_err{color:#e15f63;font-size:13px;margin-top:5px;position:relative;height:24px;}
+.login_frame .login_err p{display:none;}
+.login_frame .login_err i{position:absolute;top:0px;left:0px;background:url(../images/login_ico.png) -24px 0 no-repeat;height:24px;width:24px;overflow:hidden;line-height:120px;}
+.login_frame .login_err span{position:absolute;top:0px;left:24px;height:24px;line-height:24px;}
+.login_form{margin-top:5px;}
+.login_form .input_box{position:relative;padding:3px 0 3px 54px;border:1px solid #e7e7eb;margin-top:-1px;}
+.login_form .input_box label{position:absolute;left:15px;top:50%;margin-top:-11px;width:16px;height:18px;vertical-align:middle;display:inline-block;}
+.login_form .input_box input{border:0;outline:0;background-color:#FFF;padding:11px 0;vertical-align:middle;width:100%;}
+.login_form .input_box.username label{background:url(../images/login_ico.png) 1px -1px no-repeat;height:24px;width:24px;display:block;overflow:hidden;line-height:120px;}
+.login_form .input_box.password label{background:url(../images/login_ico.png) -48px -1px no-repeat;height:24px;width:24px;display:block;overflow:hidden;line-height:120px;}
+.login_form .verifycode{position:relative;height:50px;font-size:14px;padding:0 10px;margin-top:10px;}
+.login_form .verifycode input{position:absolute;top:0px;left:0px;height:26px;border:1px solid #e7e7eb;width:90px;padding:11px 10px;vertical-align:middle;}
+.login_form .verifycode img{position:absolute;top:0px;left:120px;height:48px;width:110px;border:1px solid #d3e6f6;cursor:pointer;}
+.login_form .verifycode a{position:absolute;top:0px;left:240px;height:50px;line-height:50px;width:76px;display:block;text-align:center;}
+.login_form .login_help{margin-top:10px;height:24px;}
+.login_form .login_help .remember{position:relative;float:left;display:inline-block;width:88px;height:24px;line-height:24px;}
+.login_form .login_help .remember i{position:absolute;top:4px;left:0px;height:16px;width:16px;display:block;background:url(../images/login_ico.png) -76px -4px no-repeat;}
+.login_form .login_help i.checked{background:url(../images/login_ico.png) -100px -4px no-repeat;}
+.login_form .login_help .remember span{position:absolute;top:0px;left:20px;height:24px;line-height:24px;display:block;width:100px;color:#222;}
+.login_form .login_help .question{float:right;display:inline-block;height:24px;line-height:24px;color:#459ae9;}
+.login_form .login_help .question:hover{text-decoration:underline;}
+.login_form .login_btn{margin-top:20px;}
+.login_form .login_btn .login_button{height:33px;line-height:33px;width:120px;padding:0px;color:#FFF;border:1px solid #008fff;text-align:center;display:block;background-color:#008fff;border-radius:3px;-moz-border-radius:3px;-webkit-border-radius:3px;}
+.login_form .login_btn .login_button:hover{background-color:#2f9833;border:1px solid #2f9833;}
+.login_form .login_btn .login_button.loading{background-color:#cbcbcb;border:#bdbdbd 1px solid;cursor:default;}
+/*通知*/
+.body .notice_box{width:1080px;margin:0 auto;background:#FFF;margin-top:30px;border:1px solid #d0d1d3;overflow:hidden;}
+.body .notice_box i{height:24px;width:24px;margin:6px;float:left;display:inline-block;background:url("../images/login_ico.png") -144px 0 no-repeat;text-indent:-9999px;overflow:hidden;}
+.body .notice_box span{height:24px;line-height:24px;margin:6px 0px;float:left;display:inline-block;color:#666;}
+/*脚部*/
+.footer{position:fixed;bottom:0;border-top:1px solid #c3c3c3;background:#313131;text-align:center;padding:20px 0;color:#fff;font-size:12px;width:100%;}
+.footer_box{height:20px;line-height:20px;}

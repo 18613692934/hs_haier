@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html>
+ <head> 
+  <title></title> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" /> 
+  <meta name="renderer" content="webkit" /> 
+  <meta name="viewport" content="width=device-width, initial-scale=1" /> 
+  <!--插件CSS-->
+    <link href="__PUBLIC_STATIC__/layui/css/layui.css" type="text/css" rel="stylesheet" /> 
+     <link href="__PUBLIC_STATIC__/h-ui/css/H-ui.min.css" type="text/css" rel="stylesheet" /> 
+  <!--<link href="__HOME_CSS__/H-ui.min.css" type="text/css" rel="stylesheet" />--> 
+  
+  <!--<link href="__HOME_CSS__/font-awesome.min.css" type="text/css" rel="stylesheet" />--> 
+  <!--<link href="__HOME_CSS__/monui.css" type="text/css" rel="stylesheet" />--> 
+  <!--<link href="__HOME_CSS__/common.css" type="text/css" rel="stylesheet" />--> 
+  <!--<link href="__HOME_CSS__/jquery.datatables.min.css" type="text/css" rel="stylesheet" />--> 
+  <!--<link href="__HOME_CSS__/common_1.css" type="text/css" rel="stylesheet" />--> 
+  <link href="__HOME_CSS__/header.css" type="text/css" rel="stylesheet" /> 
+  <link href="__HOME_CSS__/index.css" type="text/css" rel="stylesheet" /> 
+  <!--<link href="__HOME_CSS__/carousel.css" type="text/css" rel="stylesheet" />--> 
+  <!--<link href="__HOME_CSS__/iconfont.css" type="text/css" rel="stylesheet" />--> 
+  <link href="__HOME_CSS__/swiper.min.css" type="text/css" rel="stylesheet" /> 
+  <script type="text/javascript" src="__HOME_JS__/jquery.min.js"></script> 
+  <!--<script type="text/javascript" src="__HOME_JS__/form.js"></script>--> 
+  <!--<script type="text/javascript" src="__HOME_JS__/common.js"></script>--> 
+  <!--<script type="text/javascript" src="__HOME_JS__/dialog.js"></script>--> 
+  <!--<script type="text/javascript" src="__HOME_JS__/jquery.pagination.js"></script>--> 
+  <!--<script type="text/javascript" src="__HOME_JS__/jquery.dcjqaccordion.2.7.js"></script>--> 
+  <!--<script type="text/javascript" src="__HOME_JS__/jquery.datatables.min.js"></script>--> 
+  <!--<script type="text/javascript" src="__HOME_JS__/dmp-datatable.js"></script>--> 
+  <!--<script type="text/javascript" src="__HOME_JS__/jquery.validate.min.js"></script>--> 
+  <!--<script type="text/javascript" src="__HOME_JS__/messages_cn.js"></script>--> 
+  <!--<script type="text/javascript" src="__HOME_JS__/jquery.form.js"></script>--> 
+  <!--<script type="text/javascript" src="__HOME_JS__/highcharts.js"></script>--> 
+  <!--<script type="text/javascript" src="__HOME_JS__/template.js"></script>--> 
+  <!--<script type="text/javascript" src="__HOME_JS__/template.js"></script>--> 
+  <!--<script type="text/javascript" src="__HOME_JS__/logindialog.js"></script>--> 
+  <!--<script type="text/javascript" src="__HOME_JS__/md5.js"></script>--> 
+  <!--<script type="text/javascript" src="__HOME_JS__/detectbrowser.js"></script>--> 
+  <!--<script type="text/javascript" src="__HOME_JS__/index.js"></script>--> 
+  <!--<script type="text/javascript" src="__HOME_JS__/carousel.js"></script>--> 
+  <!--<script type="text/javascript" src="__HOME_JS__/tags-ball.js"></script>--> 
+  <script type="text/javascript" src="__HOME_JS__/swiper.min.js"></script> 
+   <script type="text/javascript" src="__HOME_JS__/fontSize.js"></script> 
+   <!--可视化专题css-->
+       <!-- Basic styles -->
+<link href="http://yladc.com/static/css/bootstrap.css" rel="stylesheet">
+<link  href="http://yladc.com/static/css/font-awesome.min.css" rel="stylesheet">
+   <!-- Custom styles for this template -->
+    <link href="http://yladc.com/static/theme/css/default_theme.css" rel="stylesheet">
+    <!--<link href="http://yladc.com/static/index/css/index.css" rel="stylesheet">-->
+    <!--<link href="http://yladc.com/static/css/font-awesome.min.css" rel="stylesheet">-->
+    
+    <link href="http://yladc.com/static/css/bootstrap_ext.css" rel="stylesheet">
+
+   
+ </head> 
+ <body> 
+  <!--<script src="__HOME_JS__/dialog.js"></script>--> 
+  <style>
+    .modal {
+     z-index: 10001;
+    }
+
+    .swiper-container {
+      width: 100%;
+      height: auto;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .swiper .swiper-slide{
+        height: 400px;  
+    }
+    .swiper-slide {
+      text-align: center;
+      font-size: 18px;
+      background: #fff;
+      height: 200px;
+
+      /* Center slide text vertically */
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      -webkit-justify-content: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      -webkit-align-items: center;
+      align-items: center;
+    }
+    .swiper-border{
+        border: 1px solid #4FADE5;
+    }
+    .swiper-img{
+        width:100%;height:100%;
+    }
+
+</style> 
+
+  <div class="sy_line"></div> 
+ {include file="Header/header"/} 
+
+  <div class="header-bg"></div> 
+  <div class="m-banner"> 
+
+   <div class="carousel" id="caro"> 
+        <!-- Swiper -->
+        <div class="swiper">
+          <div class="swiper-wrapper">
+            
+            
+            <div class="swiper-slide"><img src="__HOME_IMG__/md_ban1.png" class="swiper-img"/></div>
+            
+          </div>
+        </div>
+   </div> 
+  
+  </div> 
+
+  <div class="m-category"> 
+
+    <div class="m-cate-tab"> 
+
+     <ul class="tab-body"> 
+      <li class="active"> 
+       <div class="subj-list" style="padding:15px;border: 1px solid #ccc;background-color: #f9f9f9;"> 
+            <!-- Swiper -->
+              <div class="swiper-container">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide swiper-border"><img src="__HOME_IMG__/md_ban1.png" class="swiper-img"/></div>
+                  <div class="swiper-slide swiper-border"><img src="__HOME_IMG__/md_ban1.png"  class="swiper-img"/></div>
+                  <div class="swiper-slide swiper-border"><img src="__HOME_IMG__/md_ban1.png" class="swiper-img"/></div>
+                  <div class="swiper-slide swiper-border"><img src="__HOME_IMG__/md_ban1.png" class="swiper-img"/></div>
+                  <div class="swiper-slide swiper-border"><img src="__HOME_IMG__/md_ban1.png" class="swiper-img"/></div>
+                  <div class="swiper-slide swiper-border"><img src="__HOME_IMG__/md_ban1.png" class="swiper-img"/></div>
+                  <div class="swiper-slide swiper-border"><img src="__HOME_IMG__/md_ban1.png" class="swiper-img"/></div>
+                  <div class="swiper-slide swiper-border"><img src="__HOME_IMG__/md_ban1.png" class="swiper-img"/></div>
+                  <div class="swiper-slide swiper-border"><img src="__HOME_IMG__/md_ban1.png" class="swiper-img"/></div>
+                  <div class="swiper-slide swiper-border"><img src="__HOME_IMG__/md_ban1.png" class="swiper-img"/></div>
+                </div>
+<!--                   <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>-->
+                <div class="swiper-pagination"></div>
+              </div>
+             <!-- Swiper JS -->
+       </div> </li> 
+     </ul> 
+    </div> 
+   
+  </div>
+  <!--专题数据-->
+<!--  <div class="content-block white-bg">
+        <div class="font-30 text-center"><i class="margin-r-10"><img src="http://yladc.com/static/index/img/icon-data.png"></i>专题数据</div>
+        <div class="m-index-list"> 
+            <div class="g-main"> 
+                <div class="m-list-right"> 
+                    <div class="list-right-title">
+                        <span>资讯</span>
+                        <a href="http://jindata.sd.gov.cn/odweb/news/newsList.htm">更多&gt;</a>
+                    </div> 
+                    <div class="notice-list"> 
+                        <ul> 
+                            <li> <a href="http://jindata.sd.gov.cn:80/odweb/news/newsDetail.htm?news_id=21" title="X市公共数据开放清单（第一批）">公共数据开放清单（第一批） </a> </li> 
+                        </ul> 
+                    </div>
+                </div> 
+       
+                <div class="dataList-container"> 
+                    <div class="layui-tab layui-tab-brief" lay-filter="docDemoTabBrief">
+                        <ul class="layui-tab-title list-name">
+                            <li class="layui-this data ">专家建议</li>
+                            <li class="data" >政策服务</li>
+                        </ul>
+                        <div class="layui-tab-content">
+                            <div class="layui-tab-item layui-show">
+                                <div class="m-tab tab-panel hot-catalog"> 
+                                    <div class="list-container"> 
+                                        <ul> 
+                                            <li> 
+                                                <div class="l-title"> 
+                                                    <a href="http://jindata.sd.gov.cn/odweb/catalog/catalogDetail.htm?cata_id=23fb5d37ed38446082d44cb015394cf8" target="_blank">X市审批注册幼儿园基本情况一览表</a> 
+                                                    <div class="type">
+                                                     教育
+                                                    </div> 
+                                                </div> 
+                                                <div class="l-content"> 
+                                                    <div class="detail">
+                                                     审批注册幼儿园基本情况一览表 
+                                                    </div> 
+                                                    <div class="others"> 
+                                                        <div class="detail-type">
+                                                            来源部门：
+                                                            <span>X市教育局</span>
+                                                        </div> 
+                                                        <div class="detail-type">
+                                                         所属行业：
+                                                         <span>教育</span>
+                                                        </div> 
+                                                        <div class="detail-type">
+                                                         发布时间：
+                                                         <span>2018-03-22 10:59:12</span>
+                                                        </div> 
+                                                    </div> 
+                                                </div> 
+                                            </li> 
+                                        </ul> 
+                                    </div> 
+                                </div>
+
+                            </div>
+                            <div class="layui-tab-item">
+                                <div class="m-tab tab-panel hot-catalog"> 
+                                    <div class="list-container"> 
+                                        <ul> 
+                                            <li> 
+                                                <div class="l-title"> 
+                                                    <a href="http://jindata.sd.gov.cn/odweb/catalog/catalogDetail.htm?cata_id=49f20cbe05be41d4a25051d1798cddbe" target="_blank">优秀艺术作品名录信息</a> 
+                                                    <div class="type">
+                                                     文化
+                                                    </div> 
+                                                </div> 
+                                                <div class="l-content"> 
+                                                    <div class="detail">
+                                                     X市文广新局---优秀艺术作品名录信息 
+                                                    </div> 
+                                                    <div class="others"> 
+                                                        <div class="detail-type">
+                                                            来源部门：
+                                                            <span>X市文化广电新闻出版局</span>
+                                                        </div> 
+                                                        <div class="detail-type">
+                                                            所属行业：
+                                                            <span>文化、体育和娱乐业</span>
+                                                        </div> 
+                                                        <div class="detail-type">
+                                                            发布时间：
+                                                            <span>2018-08-28 17:05:12</span>
+                                                        </div> 
+                                                    </div> 
+                                                </div> 
+                                             </li> 
+                                        </ul> 
+                                   </div> 
+                                </div>            
+                            </div>
+                        </div>
+                    </div> 
+                </div> 
+            </div> 
+        </div>
+    </div>-->
+  <!--可视化专题-->
+  <div class="content-block white-bg">
+        <div class="font-30 text-center"><i class="margin-r-10"><img src="__HOME_IMG__/icon-zt.png"></i>可视化专题</div>
+        <div class="container">
+            <div class="special-topic">
+                <ul class="row">
+                    <li class="col-md-8">
+                        <a href="{:U('Environment/environment')}" target="_blank">
+                            <div class="topic-card">
+                                <div class="topic-title color1">
+                                    环境监控
+                                </div>
+                                <div class="topic-body">
+                                    <img src="__HOME_IMG__/zt1.gif">
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="col-md-8">
+                        <a href="{:U('Charts/charts')}" target="_blank">
+                            <div class="topic-card">
+                                <div class="topic-title color2">
+                                    年度台帐
+                                </div>
+                                <div class="topic-body">
+                                    <img src="__HOME_IMG__/zt2.gif">
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="col-md-8">
+                        <a href="{:U('Pick/pick')}" target="_blank">
+                            <div class="topic-card">
+                                <div class="topic-title color3">
+                                    采摘基地
+                                </div>
+                                <div class="topic-body">
+                                    <img src="__HOME_IMG__/zt3.gif">
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div> 
+   {include file="Header/footer"/} 
+<script type="text/javascript" src="__PUBLIC_STATIC__/layui/layui.js"></script> 
+<script>
+    var swiper = new Swiper('.swiper',{
+        effect: 'fade',
+        spaceBetween: 30,
+//        autoplay: {
+//            delay: 2500,
+//            disableOnInteraction: false,
+//        },
+        
+    });
+</script>
+ <script>
+    layui.use('element', function(){
+        var $ = layui.jquery
+        ,element = layui.element; //Tab的切换功能，切换事件监听等，需要依赖element模块
+    });
+      
+    var swiper = new Swiper('.swiper-container', {
+      slidesPerView: 3,
+      slidesPerColumn: 2,
+      spaceBetween: 30,
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+    });
+  </script>
+
+ </body>
+</html>

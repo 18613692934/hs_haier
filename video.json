@@ -1,0 +1,53 @@
+{
+    "video": [
+            {
+                "device_code":111,
+                "name":"李张庄01",
+                "rtmp-gq":"rtmp://rtmp.open.ys7.com/openlive/1c608a928a6944bbac8dc6277a0224d6.hd"
+            ,"status":"1"
+            },
+            {
+                "device_code":112,
+                "name":"李张庄02",
+                "rtmp-gq":""
+            ,"status":"0"
+            },
+            {
+                "device_code":113,
+                "name":"李张庄03",
+                "rtmp-gq":"rtmp://rtmp.open.ys7.com/openlive/e10e69f6ddbb4c809381d71a0448bffe.hd"
+            ,"status":"1"
+            },
+            {
+                "device_code":114,
+                "name":"李张庄04",
+                "rtmp-gq":"rtmp://rtmp.open.ys7.com/openlive/c1fd9c55e17d4e07a18a2a7f67108433.hd",
+            "status":"1"
+            },
+            {
+                "device_code":121,
+                "name":"兴隆01",
+                "rtmp-gq":"rtmp://rtmp.open.ys7.com/openlive/1c608a928a6944bbac8dc6277a0224d6.hd",
+                "status":"0"
+            },
+            {
+                "device_code":122,
+                "name":"兴隆02",
+                "rtmp-gq":"",
+                "status":"0"
+            },
+            {
+                "device_code":123,
+                "name":"兴隆03",
+                "rtmp-gq":"rtmp://rtmp.open.ys7.com/openlive/e10e69f6ddbb4c809381d71a0448bffe.hd",
+                "status":"0"
+            },
+            {
+                "device_code":124,
+                "name":"兴隆04",
+                "rtmp-gq":"rtmp://rtmp.open.ys7.com/openlive/c4eb8d0557694ff9b7761fbb98cffbb3.hd",
+                "status":"1"
+            }
+            
+    ]
+}

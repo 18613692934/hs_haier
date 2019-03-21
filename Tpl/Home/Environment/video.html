@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="renderer" content="webkit" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<!--<link  href="__HOME_CSS__/font-awesome.min.css" type="text/css" rel="stylesheet" />-->
+	<link  href="__HOME_CSS__/monui.css" type="text/css" rel="stylesheet" />
+	<!--<link  href="__HOME_CSS__/common.css" type="text/css" rel="stylesheet" />-->
+	<!--<link  href="__HOME_CSS__/jquery.datatables.min.css" type="text/css" rel="stylesheet" />-->
+	<!--<link  href="__HOME_CSS__/common_1.css" type="text/css" rel="stylesheet" />-->
+	<link  href="__HOME_CSS__/header.css" type="text/css" rel="stylesheet" />
+	<!--<link  href="__HOME_CSS__/commonlist.css" type="text/css" rel="stylesheet" />-->
+	<!--<link  href="__HOME_CSS__/cities.css" type="text/css" rel="stylesheet" />-->
+	<!--<link  href="__HOME_CSS__/iconfont.css" type="text/css" rel="stylesheet" />-->
+	<!--<link  href="__HOME_CSS__/iconfont_1.css" type="text/css" rel="stylesheet" />-->
+	<!--<link  href="__HOME_CSS__/iconfont_2.css" type="text/css" rel="stylesheet" />-->
+	<!--<link  href="__HOME_CSS__/iconfont_3.css" type="text/css" rel="stylesheet" />-->
+	<!--<link  href="__HOME_CSS__/easydialog.css" type="text/css" rel="stylesheet" />-->
+	<!--<link  href="__HOME_CSS__/common_2.css" type="text/css" rel="stylesheet" />-->
+        
+  <!--<link rel="stylesheet" type="text/css" href="__HOME_CSS__/H-ui.min.css" />-->
+   <script type="text/javascript" src="__HOME_JS__/fontSize.js"></script> 
+   <!--插件CSS-->
+   <link rel="stylesheet" href="__PUBLIC_STATIC__/layui/css/layui.css" media="all">
+   
+   <!-- Basic styles -->
+<link href="http://yladc.com/static/css/bootstrap.css" rel="stylesheet">
+<link  href="http://yladc.com/static/css/font-awesome.min.css" rel="stylesheet">
+<!-- Expand styles -->
+<link href="http://yladc.com/static/css/bootstrap_ext.css" rel="stylesheet">
+<link href="http://yladc.com/static/css/ecsp_size.css" rel="stylesheet">
+<link href="http://yladc.com/static/css/bs_plugins.css" rel="stylesheet">
+<link href="http://yladc.com/static/theme/css/default_theme.css" rel="stylesheet">
+<link href="http://yladc.com/static/css/control-library.css" rel="stylesheet">
+<!-- Message styles  * Add liyingkang * -->
+<link href="http://yladc.com/static/components/css/components.css" rel="stylesheet">
+<link href="http://yladc.com/static/css/animate.min.css" rel="stylesheet">
+
+
+
+    
+    <!-- Custom styles for this template -->
+    <link href="http://yladc.com/static/data-service/css/data-service.css" rel="stylesheet">
+
+   
+</head>
+<body>
+
+
+
+<script>
+    var ctx = 'http://yladc.com/static';
+    var ctx_w = 'http://yladc.com';
+    var rest_url = 'http://10.176.4.154:9001';
+    var upload_url = 'http://yladc.com';
+    var userimg = '';
+    var loginName = '';
+    var userId = '';
+        {var rongKey = '25wehl3u2juww';}
+                var userkey = '';
+        var userType = '';
+    var appId = 'app001';
+        
+
+    $(document).ready(function () {
+//        $("#keywords").bind('keyup', function (event) {
+//            event = document.all ? window.event : event;
+//            if ((event.keyCode || event.which) == 13) {
+//                slor();
+//            }
+//        });
+
+        $(window).returntop({
+            showHeight: 50, //设置滚动多少高度时显示
+            speed: 300  //返回顶部的速度以毫秒为单位
+        });
+        $('input, textarea').not(':password').placeholder();
+        $("[limit]").limit();
+        jQuery.fn.isChildAndSelfOf = function (b) {
+            return (this.closest(b).length > 0);
+        };
+        $(document).click(function (event) {
+            if (!$(event.target).isChildAndSelfOf(".text-dropdown")) {
+                $(".dropdown-area").hide();
+            }
+        });
+
+
+        //尾部高度
+        var footerHeight = 0,
+                footerTop = 0,
+                $footer = $("#yly-footer");
+        positionFooter();
+        //定义positionFooter function
+        function positionFooter() {
+            //取到div#footer高度
+            footerHeight = $footer.height();
+            //div#footer离屏幕顶部的距离
+            footerTop = ($(window).scrollTop() + $(window).height() - footerHeight) + "px";
+            //alert(footerTop);
+
+            //如果页面内容高度小于屏幕高度，div#footer将绝对定位到屏幕底部，否则div#footer保留它的正常静态定位
+            if (($(document.body).height() + footerHeight) < $(window).height()) {
+                $footer.css({
+                    width: '100%',
+                    bottom: 0,
+                    position: "absolute"
+                });
+            } else {
+                $footer.css({
+                    position: "static"
+                });
+            }
+        }
+
+        $(window).scroll(positionFooter).resize(positionFooter);
+    });
+
+//    function slor() {
+//        $("#headerForm").submit();
+//    }
+</script>
+
+
+
+
+
+
+
+
+
+
+<div class="sy_line"></div>
+{include file="Header/header"/}
+
+<div class="banner" style="height: 140px;background: url('__HOME_IMG__/env_banner.jpg') center"></div>
+  <div id="bd-content" class="bd-content" style="margin-top:40px;">
+    <div class="container">
+        
+
+        <div class="row">
+            <div class="col-md-24">
+            
+   
+<ul class="nav nav-tabs">
+    <li class="<?php if($Think.ACTION_NAME == 'env_list'){ ?>active <?php } ?>"  >
+        <a href="{:U('Environment/env_list')}">环境数据</a>
+    </li>
+    <li class="<?php if($Think.ACTION_NAME == 'video'){ ?>active <?php } ?>">
+        <a href="{:U('Environment/video')}">视频监控</a>
+    </li>
+</ul>
+                <style>
+            #myPlayer{
+                margin-top:50px;
+                width:100%;
+                height:500px;
+            }
+            
+        </style>
+               <script src="__PUBLIC_STATIC__/EZUIKit-1.4/ezuikit.js"></script>
+        
+            
+
+        <video id="myPlayer" poster="[这里可以填入封面图片URL]" controls playsInline webkit-playsinline autoplay>
+            <source src="{$rtmp}" type="" />
+        </video>
+
+        <script>
+            var player = new EZUIPlayer('myPlayer');
+        </script>
+               
+
+            </div>
+        </div>
+    </div>
+</div> 
+
+
+<!--插件JS-->
+<script src="__PUBLIC_STATIC__/layui/layui.js"></script>
+<script>
+  
+</script>
+{include file="Header/footer"/}
+
+</body>
+</html>
+
