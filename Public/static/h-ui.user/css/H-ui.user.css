@@ -21,8 +21,9 @@ h4{line-height:30px}
     width: 1200px;
     margin-left: auto;
     margin-right: auto;
-    height:100%;ian mei 
+    height:100%; 
 }
+/*项目上传测试*/
 .Hui-aside{position: absolute;top:130px;bottom:0;left:0;margin-left:10px;padding-top:10px;width:199px;z-index:99;overflow:auto; background-color:rgba(238,238,238,0.98);_background-color:rgb(238,238,238);border-right: 1px solid #e5e5e5}
 .Hui-article-box{position: absolute;top:130px;right:0;bottom: 0;left:199px; overflow:hidden; z-index:1; background-color:#fff}
 .Hui-article{position: absolute;top:34px;bottom:0;left:0; right:0;overflow:auto;z-index:1}
